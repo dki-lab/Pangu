@@ -14,7 +14,7 @@ Please configure your own conda environment using `environment.yml`. Replace `[y
 
 ## File Structure
 ```
-pangu_anonymous/
+pangu/
 ├─  acl_configs/: configuration files for training and inference
 ├─  data/: KBQA data files (e.g., GrailQA)
 ├─  ontology/: Processed Freebase ontology files
