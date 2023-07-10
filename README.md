@@ -12,6 +12,10 @@
 
 <img width="927" alt="image" src="https://github.com/dki-lab/Pangu/assets/15921425/0945d7bf-e200-4bce-867f-550bb341e16f">
 
+## Core Idea
+<img width="392" alt="image" src="https://github.com/dki-lab/Pangu/assets/15921425/3ec0525a-4175-4944-8980-2e3d4e1b010a">
+
+
 
 
 ## Environment Setup
