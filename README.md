@@ -10,8 +10,8 @@
 >A key missing capacity of current language models (LMs) is grounding to real-world environments. Most existing work for grounded language understanding uses LMs to directly generate plans that can be executed in the environment to achieve the desired effects. It thereby casts the burden of ensuring grammaticality, faithfulness, and controllability all on the LMs. We propose Pangu, a generic framework for grounded language understanding that capitalizes on the discriminative ability of LMs instead of their generative ability. Pangu consists of a symbolic agent and a neural LM working in a concerted fashion: The agent explores the environment to incrementally construct valid plans, and the LM evaluates the plausibility of the candidate plans to guide the search process. A case study on the challenging problem of knowledge base question answering (KBQA), which features a massive environment, demonstrates the remarkable effectiveness and flexibility of Pangu: A BERT-base LM is sufficient for setting a new record on standard KBQA datasets, and larger LMs further bring substantial gains. Pangu also enables, for the first time, effective few-shot in-context learning for KBQA with large LMs such as Codex.
 
 
-<img width="527" alt="image" src="https://github.com/dki-lab/Pangu/assets/15921425/0945d7bf-e200-4bce-867f-550bb341e16f">
-<img width="392" alt="image" src="https://github.com/dki-lab/Pangu/assets/15921425/3ec0525a-4175-4944-8980-2e3d4e1b010a">
+<img width="450" alt="image" src="https://github.com/dki-lab/Pangu/assets/15921425/0945d7bf-e200-4bce-867f-550bb341e16f">
+<img width="320" alt="image" src="https://github.com/dki-lab/Pangu/assets/15921425/3ec0525a-4175-4944-8980-2e3d4e1b010a">
 
 ## Walk Through Pangu with KBQA
 ![pangu_compressed](https://github.com/dki-lab/Pangu/assets/15921425/afb980ac-0d7a-48b2-a1ff-f39e60f20437)
