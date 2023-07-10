@@ -16,21 +16,6 @@
 ## Walk Through Pangu with KBQA
 ![pangu_compressed](https://github.com/dki-lab/Pangu/assets/15921425/afb980ac-0d7a-48b2-a1ff-f39e60f20437)
 
-## Results
-### Overall Results
-<img width="782" alt="image" src="https://github.com/dki-lab/Pangu/assets/15921425/04874076-5117-4979-b0f3-02fbd113a64c">
-
-### Sample Efficiency
-<img width="575" alt="image" src="https://github.com/dki-lab/Pangu/assets/15921425/6c9f244c-8252-4087-a062-20dc2f8f450a">
-
-### Strong Generalizability
-<img width="627" alt="image" src="https://github.com/dki-lab/Pangu/assets/15921425/0dbc08bc-2d29-41cd-9106-9e82c555ae5f">
-
-
-
-## Environment Setup
-Please configure your own conda environment using `environment.yml`. Replace `[your_conda_path]` in that file with the path of your local anaconda folder.
-
 ## File Structure
 ```
 pangu/
@@ -54,7 +39,21 @@ pangu/
 └── environment.yml: yml file for conda environment 
 ```
 
-## Training & Inference
+## Results
+### Overall Results
+<img width="782" alt="image" src="https://github.com/dki-lab/Pangu/assets/15921425/04874076-5117-4979-b0f3-02fbd113a64c">
+
+### Sample Efficiency
+<img width="575" alt="image" src="https://github.com/dki-lab/Pangu/assets/15921425/6c9f244c-8252-4087-a062-20dc2f8f450a">
+
+### Strong Generalizability
+<img width="627" alt="image" src="https://github.com/dki-lab/Pangu/assets/15921425/0dbc08bc-2d29-41cd-9106-9e82c555ae5f">
+
+## Reproducing Our Results
+### Environment Setup
+Please configure your own conda environment using [environment.yml](https://github.com/dki-lab/Pangu/blob/main/environment.yml). Replace `[your_conda_path]` in that file with the path of your local anaconda folder, and then create the environment with `conda env create -f environment.yml`.
+
+### Training & Inference
 ```
 PYTHONHASHSEED=23 python run.py
     \ train
@@ -91,3 +90,6 @@ PYTHONHASHSEED=23 python run.py
 In `utils.sparql_executer.py`, replace "http://127.0.0.1:3094/sparql" with your own SPARQL endpoint.
 
 Configure your experiments following configuration files under `acl_configs`.
+
+### Experiments with LLMs
+Will be uploaded soon
