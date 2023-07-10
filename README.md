@@ -95,3 +95,6 @@ Configure your experiments following configuration files under `acl_configs`.
 
 ### Experiments with LLMs
 Our original experiments with LLMs were done with Codex. However, since March 2023, Codex has been deprecated by OpenAI. We will adjust and upload this part of code soon.
+
+## Acknowledgements
+The authors would like to thank Percy Liang, Jiawei Han, Jonathan Berant, Huan Sun, and other colleagues from the OSU NLP group for their valu- able feedback. The authors would also like to thank Shijie Chen and Chan Hee Song for proof-of-concept implementation of Pangu on other tasks, Yiheng Shu for sharing their entity linking results, and Tianbao Xie for clarifications on UnifiedSKG. This research was supported in part by `ARL W911NF2220144`, `NSF OAC 2112606`, and Ohio Supercomputer Center.
