@@ -1,4 +1,4 @@
-:mega: :mega:**(This is mainly for reproducing our ACL'2023 results on KBQA. In the next version, we will release the generic Pangu library.)**
+:mega: :mega:**(This is mainly for reproducing our ACL'2023 results on KBQA. We will release the generic Pangu library in [OSU-NLP-Group/Pangu](https://github.com/OSU-NLP-Group/Pangu).)**
 
 # Don't Generate, Discriminate: A Proposal for Grounding Language Models to Real-World Environments
 [![Contributions Welcome](https://img.shields.io/badge/Contributions-Welcome-brightgreen.svg?style=flat-square)](https://github.com/dki-lab/Pangu/issues)
