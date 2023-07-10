@@ -14,6 +14,7 @@
 <img width="392" alt="image" src="https://github.com/dki-lab/Pangu/assets/15921425/3ec0525a-4175-4944-8980-2e3d4e1b010a">
 
 ## Walk Through Pangu with KBQA
+![pangu_compressed](https://github.com/dki-lab/Pangu/assets/15921425/afb980ac-0d7a-48b2-a1ff-f39e60f20437)
 
 
 ## Environment Setup
