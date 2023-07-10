@@ -1,4 +1,4 @@
-:mega: :mega:**(This is mainly for reproducing our ACL'2023 results on KBQA. We will release the generic Pangu library in [OSU-NLP-Group/Pangu](https://github.com/OSU-NLP-Group/Pangu).)**
+:mega: :mega:**(This is mainly for reproducing the results in our ACL'2023 paper. We will release the generic Pangu library in [OSU-NLP-Group/Pangu](https://github.com/OSU-NLP-Group/Pangu).)**
 
 # Don't Generate, Discriminate: A Proposal for Grounding Language Models to Real-World Environments
 [![Contributions Welcome](https://img.shields.io/badge/Contributions-Welcome-brightgreen.svg?style=flat-square)](https://github.com/dki-lab/Pangu/issues)
@@ -6,6 +6,7 @@
 [![language-python3](https://img.shields.io/badge/Language-Python3-blue.svg?style=flat-square)](https://www.python.org/)
 [![made-with-Pytorch](https://img.shields.io/badge/Made%20with-Pytorch-orange.svg?style=flat-square)](https://pytorch.org/)
 [![paper](https://img.shields.io/badge/Paper-ACL2023-lightgrey?style=flat-square)](https://arxiv.org/abs/2212.09736)
+[![award](https://img.shields.io/badge/Award-Outstanding%20Paper%20Award-gold?style=flat-square)](https://arxiv.org/abs/2212.09736)
 
 >A key missing capacity of current language models (LMs) is grounding to real-world environments. Most existing work for grounded language understanding uses LMs to directly generate plans that can be executed in the environment to achieve the desired effects. It thereby casts the burden of ensuring grammaticality, faithfulness, and controllability all on the LMs. We propose Pangu, a generic framework for grounded language understanding that capitalizes on the discriminative ability of LMs instead of their generative ability. Pangu consists of a symbolic agent and a neural LM working in a concerted fashion: The agent explores the environment to incrementally construct valid plans, and the LM evaluates the plausibility of the candidate plans to guide the search process. A case study on the challenging problem of knowledge base question answering (KBQA), which features a massive environment, demonstrates the remarkable effectiveness and flexibility of Pangu: A BERT-base LM is sufficient for setting a new record on standard KBQA datasets, and larger LMs further bring substantial gains. Pangu also enables, for the first time, effective few-shot in-context learning for KBQA with large LMs such as Codex.
 
