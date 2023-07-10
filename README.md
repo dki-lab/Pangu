@@ -94,4 +94,4 @@ In `utils.sparql_executer.py`, replace "http://127.0.0.1:3094/sparql" with your 
 Configure your experiments following configuration files under `acl_configs`.
 
 ### Experiments with LLMs
-Will be uploaded soon
+Our original experiments with LLMs were done with Codex. However, since March 2023, Codex has been deprecated by OpenAI. We will adjust and upload this part of code soon.
