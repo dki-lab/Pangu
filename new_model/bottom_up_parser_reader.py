@@ -20,9 +20,6 @@ from allennlp.data.instance import Instance
 from allennlp.data.tokenizers import Token, Tokenizer
 from allennlp.data.token_indexers import TokenIndexer, SingleIdTokenIndexer
 
-from utils.my_pretrained_transformer_tokenizer import PretrainedTransformerTokenizer
-from utils.my_pretrained_transformer_indexer import PretrainedTransformerIndexer
-
 from utils.sparql_executer import get_notable_type
 from utils.logic_form_util import reverse_properties, get_sub_programs, fill_sub_programs
 from utils.semparse_util import lisp_to_nested_expression
@@ -37,44 +34,8 @@ path = str(Path(__file__).parent.absolute())
 
 @DatasetReader.register("bottom_up")
 class BUParser_DatasetReader(DatasetReader):
-    """
-    Read a tsv file containing paired sequences, and create a dataset suitable for a
-    ``ComposedSeq2Seq`` model, or any model with a matching API.
-
-    Expected format for each input line: <source_sequence_string>\t<target_sequence_string>
-
-    The output of ``read`` is a list of ``Instance`` s with the fields:
-        source_tokens : ``TextField`` and
-        target_tokens : ``TextField``
-
-    `START_SYMBOL` and `END_SYMBOL` tokens are added to the source and target sequences.
-
-    # Parameters
-
-    source_tokenizer : ``Tokenizer``, optional
-        Tokenizer to use to split the input sequences into words or other kinds of tokens. Defaults
-        to ``SpacyTokenizer()``.
-    target_tokenizer : ``Tokenizer``, optional
-        Tokenizer to use to split the output sequences (during training) into words or other kinds
-        of tokens. Defaults to ``source_tokenizer``.
-    source_token_indexers : ``Dict[str, TokenIndexer]``, optional
-        Indexers used to define input (source side) token representations. Defaults to
-        ``{"tokens": SingleIdTokenIndexer()}``.
-    target_token_indexers : ``Dict[str, TokenIndexer]``, optional
-        Indexers used to define output (target side) token representations. Defaults to
-        ``source_token_indexers``.
-    source_add_start_token : bool, (optional, default=True)
-        Whether or not to add `START_SYMBOL` to the beginning of the source sequence.
-    source_add_end_token : bool, (optional, default=True)
-        Whether or not to add `END_SYMBOL` to the end of the source sequence.
-    delimiter : str, (optional, default="\t")
-        Set delimiter for tsv/csv file.
-    """
-
     def __init__(
             self,
-            # source_tokenizer: Tokenizer = None,
-            # source_token_indexers: Dict[str, TokenIndexer] = None,
             # lazy: bool = False,
             dataset: str = 'grail',
             training: bool = True,
@@ -93,9 +54,6 @@ class BUParser_DatasetReader(DatasetReader):
     ) -> None:
         super().__init__()
         # self._source_tokenizer = source_tokenizer or (lambda x: x.split())
-        # In my final experiments, both source_tokenizer and source_token_indexers are not used here at all
-        # self._source_tokenizer = source_tokenizer or PretrainedTransformerTokenizer("bert-base-uncased", True)
-        # self._source_token_indexers = source_token_indexers or PretrainedTransformerIndexer("bert-base-uncased", True)
         self._source_max_exceeded = 0
         self._target_max_exceeded = 0
         self._training = training
@@ -115,14 +73,12 @@ class BUParser_DatasetReader(DatasetReader):
 
         if not self._perfect_el:
             if self._dataset == 'grail':
-                # with open(path + "/../el_results/grail_combined.json") as f:
                 with open(path + "/../el_results/grail_combined_tiara.json") as f:
                     self._el_results = json.load(f)
             elif self._dataset == 'gq1':
                 with open(path + "/../el_results/graphq_test.json") as f:
                     self._el_results = json.load(f)
             elif self._dataset == 'webq':
-                # with open(path + "/../el_results/webqsp_test.json") as f:
                 with open(path + "/../el_results/webqsp_test_elq.json") as f:
                     self._el_results = json.load(f)
 
