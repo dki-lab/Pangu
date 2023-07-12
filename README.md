@@ -69,6 +69,8 @@ PYTHONHASHSEED=23 python run.py \
     -s \
     [output_dir]
 ```
+To train the model with multiple cards using DDP, uncomment the `distributed` field in the config file.
+Note that, training can be quite slow at an earlier stage, but it will be faster when more SPARQL queries are executed and cached.
 
 To do inference with a saved model, use the first configuration in `launch.json`, or do
 ```
