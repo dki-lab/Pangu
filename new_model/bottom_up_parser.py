@@ -11,7 +11,6 @@ from utils import logic_form_util
 from utils.logic_form_util import same_logical_form, lisp_to_sparql, postprocess_raw_code, get_derivations_from_lisp, \
     get_canonical_lisp
 from utils.sparql_executer import execute_query
-from utils.my_pretrained_transformer_tokenizer import PretrainedTransformerTokenizer
 from utils.semparse_util import lisp_to_nested_expression, get_nesting_level
 
 import numpy
@@ -151,7 +150,6 @@ class BottomUpParser(Model):
             loss_option: int = 0,  # 0 for bce; 1 for softmax + (b)ce
             device: int = -1,  # device identifier for writing to the cache
             EOS: str = '[SEP]',
-            using_hf: bool = False,  # whether to use new version of huggingface tokenizers
             encoder_decoder: str = None,  # whether use pre-trained encoder-decoders (e.g., T5) for scoring
             em_augmentation: bool = False,  # whether consider programs equivalent to gold programs for training
             dataset='grail'
@@ -160,7 +158,6 @@ class BottomUpParser(Model):
         # Dense embedding of source vocab tokens.
         self._enc_dec = encoder_decoder
         self._EOS = EOS
-        self._using_hf = using_hf
         if self._enc_dec is None:
             self._source_embedder = source_embedder
             self._dropout = torch.nn.Dropout(p=dropout)
@@ -169,23 +166,9 @@ class BottomUpParser(Model):
             model_name = self._source_embedder.token_embedder_tokens.model_name
 
             if self._EOS == '[SEP]':
-                if not self._using_hf:
-                    self._source_tokenizer = PretrainedTransformerTokenizer(
-                        # model_name="bert-base-uncased",
-                        model_name=model_name,
-                        do_lowercase=True
-                    )
-                else:
-                    # self._source_tokenizer = BertTokenizer.from_pretrained("bert-base-uncased")
-                    self._source_tokenizer = AutoTokenizer.from_pretrained(model_name)
+                self._source_tokenizer = AutoTokenizer.from_pretrained(model_name)
             elif self._EOS == '</s>':
-                if not self._using_hf:
-                    self._source_tokenizer = PretrainedTransformerTokenizer(
-                        model_name="roberta-base",
-                        do_lowercase=True  # this argument is useless for roberta
-                    )
-                else:
-                    self._source_tokenizer = RobertaTokenizer.from_pretrained("roberta-base")
+                self._source_tokenizer = RobertaTokenizer.from_pretrained("roberta-base")
         else:
             if "t5" in self._enc_dec:
                 self._tokenizer = T5Tokenizer.from_pretrained(self._enc_dec)
@@ -283,8 +266,7 @@ class BottomUpParser(Model):
             self._init_epoch = self.epoch
             # this is an expedient way for thread safe writing with multi cards
             if self._device.index == self._device_id:
-                pass
-                # self._computer._cache.cache_results()
+                self._computer._cache.cache_results()
         elif self._infer and str(ids[0]) in ["test-13230", "2100263012000", "WebQTest-2031"]:
             # cache the results during prediction
             self._computer._cache.cache_results()
@@ -509,7 +491,7 @@ class BottomUpParser(Model):
                             predictions = candidate_programs_i[0]  # ideally, this should never happen
                         else:
                             predictions = Program()
-                            print("wtf!!!!")
+                            print("Unexpected!!!!")
 
                 if predictions.code_raw != '':
                     predictions.code_raw = postprocess_raw_code(predictions.code_raw)
@@ -810,18 +792,7 @@ class BottomUpParser(Model):
         num_batch = math.ceil(len(pairs) / batch_size)
         logits_list = []
         for i in range(num_batch):
-            if not self._using_hf:
-                tokenized_pairs = []
-                for pair in pairs[i * batch_size:(i + 1) * batch_size]:
-                    if self._EOS == '[SEP]':
-                        tokenized_pair = self._source_tokenizer.tokenize(pair[0] + '[SEP]' + pair[1])
-                    else:  # </s>
-                        tokenized_pair = self._source_tokenizer.tokenize(pair[0] + '</s></s>' + pair[1])
-                    tokenized_pairs.append(tokenized_pair)
-
-                plm_input = self.make_plm_input(tokenized_pairs)
-            else:
-                plm_input = self.make_plm_input_hf(pairs[i * batch_size:(i + 1) * batch_size])
+            plm_input = self.make_plm_input_hf(pairs[i * batch_size:(i + 1) * batch_size])
             pooler_output = self._source_embedder({"tokens": plm_input})
             logits = self.cls_layer(self._dropout(pooler_output))   # this is the same as XXXForSequenceClassification
             logits_list.append(logits)

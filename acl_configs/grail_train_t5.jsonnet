@@ -28,7 +28,6 @@ local eos = "[SEP]";
     "decoding_steps": decoding_steps,
     "loss_option": 1,
     "EOS": eos,
-//    "using_hf": true,
     "em_augmentation": true,
     "encoder_decoder": "t5-base",
     "device": device,
@@ -59,7 +58,7 @@ local eos = "[SEP]";
     }
 //    "summary_interval": 1
   },
-    "distributed": {
-     "cuda_devices": [4, 5, 6, 7]
-    }
+ //   "distributed": {
+ //    "cuda_devices": [4, 5, 6, 7]
+ //   }
 }

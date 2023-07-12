@@ -28,7 +28,6 @@ local eos = "[SEP]";
     "decoding_steps": decoding_steps,
     "loss_option": 1,
     "EOS": eos,
-    "using_hf": true,
     "em_augmentation": true,
     "device": device,  // this is a new field. Be careful when using -r option for training
     "source_embedder": {

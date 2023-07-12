@@ -18,10 +18,8 @@ local val_option = 2;
     "training_option": val_option,
     "infer": true,
   },
-  // "train_data_path": "data/grailqa_v1.0_train.json",
-  "train_data_path": "data/debug_grail.json",
-  // "validation_data_path": "data/grailqa_v1.0_dev.json",
-  "validation_data_path": "data/debug_grail.json",
+  "train_data_path": "data/grailqa_v1.0_train.json",
+  "validation_data_path": "data/grailqa_v1.0_dev.json",
   "model": {
     "type": "bottom_up",
     "training_option": training_option,
@@ -30,7 +28,6 @@ local val_option = 2;
     "decoding_steps": decoding_steps,
     "loss_option": 1,
     "em_augmentation": true,
-    "using_hf": true,
     "device": device,  // this is a new field. Be careful when using -r option for training
     "source_embedder": {
       "token_embedders": {
@@ -53,7 +50,7 @@ local val_option = 2;
     "batch_size": 1
   },
   "trainer": {
-    "num_epochs": 10,
+    "num_epochs": 15,
     "validation_metric": "+EM",
     "patience": 3,
     "cuda_device": device,
