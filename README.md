@@ -57,36 +57,36 @@ Please configure your own conda environment using [environment.yml](https://gith
 
 ### Training & Inference
 ```
-PYTHONHASHSEED=23 python run.py
-    \ train
-    \ acl_configs/grail_train.jsonnet
-    \ --include-package
-    \ new_model.bottom_up_parser
-    \ --include-package
-    \ new_model.bottom_up_parser_reader
-    \ --include-package
-    \ utils.huggingface_interface
-    \ -s
-    \ [output_dir]
+PYTHONHASHSEED=23 python run.py \
+    train \
+    acl_configs/grail_train.jsonnet \
+    --include-package \
+    new_model.bottom_up_parser \
+    --include-package \
+    new_model.bottom_up_parser_reader \
+    --include-package \
+    utils.huggingface_interface \
+    -s \
+    [output_dir]
 ```
 
 To do inference with a saved model, use the first configuration in `launch.json`, or do
 ```
-PYTHONHASHSEED=23 python run.py
-    \ predict
-    \ [output_dir]/model.tar.gz
-    \ [path_to_file] (e.g., grail_v1.0_test_public.json)
-    \ --include-package
-    \ new_model.bottom_up_parser
-    \ --include-package
-    \ new_model.bottom_up_parser_reader
-    \ --include-package
-    \ utils.huggingface_interface
-    \ -output-file
-    \ predictions.txt
-    \ --use-dataset-reader
-    \ -o
-    \ "{'model': {'infer': true}, 'validation_dataset_reader': {'infer': true, 'perfect_entity_linking': false}}"
+PYTHONHASHSEED=23 python run.py \
+    predict \
+    [output_dir]/model.tar.gz \
+    [path_to_file] (e.g., grail_v1.0_test_public.json) \
+    --include-package \
+    new_model.bottom_up_parser \
+    --include-package \
+    new_model.bottom_up_parser_reader \
+    --include-package \
+    utils.huggingface_interface \
+    -output-file \
+    predictions.txt \
+    --use-dataset-reader \
+    -o \
+    "{'model': {'infer': true}, 'validation_dataset_reader': {'infer': true, 'perfect_entity_linking': false}}"
 ```
 
 In `utils.sparql_executer.py`, replace "http://127.0.0.1:3094/sparql" with your own SPARQL endpoint.
