@@ -77,7 +77,7 @@ To do inference with a saved model, use the first configuration in `launch.json`
 PYTHONHASHSEED=23 python run.py \
     predict \
     [output_dir]/model.tar.gz \
-    [path_to_file] (e.g., grail_v1.0_test_public.json) \
+    [path_to_file] \
     --include-package \
     new_model.bottom_up_parser \
     --include-package \
