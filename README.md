@@ -38,6 +38,7 @@ pangu/
 │    └── bottom_up_parser_reader.py: Pangu dataset reader class
 ├─  new_model/: prediction results in json
 ├─  run.py: Main function
+├─  trained_models.md: the links to our trained models; download them to make predictions
 └── environment.yml: yml file for conda environment 
 ```
 
