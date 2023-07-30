@@ -101,3 +101,22 @@ Our original experiments with LLMs were done with Codex. However, since March 20
 
 ## Acknowledgements
 The authors would like to thank Percy Liang, Jiawei Han, Jonathan Berant, Huan Sun, and other colleagues from the OSU NLP group for their valu- able feedback. The authors would also like to thank Shijie Chen and Chan Hee Song for proof-of-concept implementation of Pangu on other tasks, Yiheng Shu for sharing their entity linking results, and Tianbao Xie for clarifications on UnifiedSKG. This research was supported in part by `ARL W911NF2220144`, `NSF OAC 2112606`, and Ohio Supercomputer Center.
+
+### Citation
+If you find our work helpful, please cite our ACL paper as follows.
+```
+@inproceedings{gu-etal-2023-dont,
+    title = "Don{'}t Generate, Discriminate: A Proposal for Grounding Language Models to Real-World Environments",
+    author = "Gu, Yu  and
+      Deng, Xiang  and
+      Su, Yu",
+    booktitle = "Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+    month = jul,
+    year = "2023",
+    address = "Toronto, Canada",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2023.acl-long.270",
+    pages = "4928--4949",
+    abstract = "A key missing capacity of current language models (LMs) is grounding to real-world environments. Most existing work for grounded language understanding uses LMs to directly generate plans that can be executed in the environment to achieve the desired effects. It thereby casts the burden of ensuring grammaticality, faithfulness, and controllability all on the LMs. We propose Pangu, a generic framework for grounded language understanding that capitalizes on the discriminative ability of LMs instead of their generative ability. Pangu consists of a symbolic agent and a neural LM working in a concerted fashion: The agent explores the environment to incrementally construct valid plans, and the LM evaluates the plausibility of the candidate plans to guide the search process. A case study on the challenging problem of knowledge base question answering (KBQA), which features a massive environment, demonstrates the remarkable effectiveness and flexibility of Pangu: A BERT-base LM is sufficient for setting a new record on standard KBQA datasets, and larger LMs further bring substantial gains.Pangu also enables, for the first time, effective few-shot in-context learning for KBQA with large LMs such as Codex.",
+}
+```
