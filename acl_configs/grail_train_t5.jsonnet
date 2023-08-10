@@ -42,9 +42,9 @@ local eos = "[SEP]";
     "batch_size": 1
   },
   "trainer": {
-    "num_epochs": 30,
+    "num_epochs": 10,
     "validation_metric": "+EM",
-    "patience": 5,
+    "patience": 3,
     "cuda_device": device,
     "num_gradient_accumulation_steps": 8,
     "callbacks": [
