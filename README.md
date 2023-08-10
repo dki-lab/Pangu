@@ -99,6 +99,21 @@ Configure your experiments following configuration files under `acl_configs`.
 ### Experiments with LLMs
 Our original experiments with LLMs were done with Codex. However, since March 2023, Codex has been deprecated by OpenAI. We will adjust and upload this part of code soon.
 
+### Training Time
+We've noted concerns about the prolonged training times on GrailQA, and would like to address some frequently asked questions:
+
+**Q1:** The projected training time for one epoch on GrailQA exceeds 100 hours, leading to a total estimated duration of over 20 days. Is this accurate?
+**A1:** During the initial phase of training, the primary hindrance to speed is the execution of SPARQL queries. As the results of these queries get cached over time, the training pace significantly accelerates. For context, when training on GrailQA with four A6000 cards, an epoch typically completes in about 15 hours. The total estimated duration you're seeing is a product of the estimated per-epoch training time and the maximum number of epochs specified in your configuration file. However, in practice, we usually don't train for the maximum number of epochs. Implementing early stopping (patience=3), the model generally completes training in just 4 or 5 epochs. This suggests convergence occurring by the first or second epoch.
+
+**Q2:** Why does validation seem sluggish?
+**A2:** The delay in validation is largely due to the caching of SPARQL executions. The process will speed up as more queries get cached. For an enhanced validation process, I recommend you uncomment every `if True` line in [kb_environment.py](https://github.com/dki-lab/Pangu/blob/main/utils/kb_environment.py) and comment out the `if self.training` lines preceding them. I recognize this isn't the most intuitive code design, and I aim to refine its structure for clearer functionality and better user experience in the near future.
+
+**Q3:** How to do distributed training?
+**A3:** AllenNLP natively supports DDP (Distributed Data Parallel) training. To activate this feature, just uncomment the 'distributed' argument in your configuration file.
+
+Additionally, we believe the cache file can be very useful for your experiments, so we also upload the cached SPARQL queries over GrailQA to OneDrive for your convenience: [execution.json](https://1drv.ms/u/s!AuJiG47gLqTzoX3hugkhIfIAOqoO?e=kqtTiy).
+
+
 ## Acknowledgements
 The authors would like to thank Percy Liang, Jiawei Han, Jonathan Berant, Huan Sun, and other colleagues from the OSU NLP group for their valu- able feedback. The authors would also like to thank Shijie Chen and Chan Hee Song for proof-of-concept implementation of Pangu on other tasks, Yiheng Shu for sharing their entity linking results, and Tianbao Xie for clarifications on UnifiedSKG. This research was supported in part by `ARL W911NF2220144`, `NSF OAC 2112606`, and Ohio Supercomputer Center.
 
