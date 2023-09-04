@@ -85,9 +85,10 @@ PYTHONHASHSEED=23 python run.py \
     new_model.bottom_up_parser_reader \
     --include-package \
     utils.huggingface_interface \
-    -output-file \
+    --output-file \
     predictions.txt \
     --use-dataset-reader \
+    --cuda 0 \
     -o \
     "{'model': {'infer': true}, 'validation_dataset_reader': {'infer': true, 'perfect_entity_linking': false}}"
 ```
