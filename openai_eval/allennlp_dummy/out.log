@@ -1,0 +1,204 @@
+2022-11-24 21:40:20,187 - INFO - allennlp.common.params - random_seed = 13370
+2022-11-24 21:40:20,187 - INFO - allennlp.common.params - numpy_seed = 1337
+2022-11-24 21:40:20,187 - INFO - allennlp.common.params - pytorch_seed = 133
+2022-11-24 21:40:28,258 - INFO - allennlp.common.checks - Pytorch version: 1.10.2
+2022-11-24 21:40:28,258 - INFO - allennlp.common.params - type = default
+2022-11-24 21:40:28,258 - INFO - allennlp.common.params - dataset_reader.type = bottom_up
+2022-11-24 21:40:28,259 - INFO - allennlp.common.params - dataset_reader.source_tokenizer.type = my_pretrained_transformer
+2022-11-24 21:40:28,259 - INFO - allennlp.common.params - dataset_reader.source_tokenizer.model_name = bert-large-uncased
+2022-11-24 21:40:28,259 - INFO - allennlp.common.params - dataset_reader.source_tokenizer.do_lowercase = True
+2022-11-24 21:40:28,259 - INFO - allennlp.common.params - dataset_reader.source_tokenizer.start_tokens = None
+2022-11-24 21:40:28,259 - INFO - allennlp.common.params - dataset_reader.source_tokenizer.end_tokens = None
+2022-11-24 21:40:28,390 - INFO - pytorch_transformers.tokenization_utils - loading file https://s3.amazonaws.com/models.huggingface.co/bert/bert-large-uncased-vocab.txt from cache at /home/gu.826/.cache/torch/pytorch_transformers/9b3c03a36e83b13d5ba95ac965c9f9074a99e14340c523ab405703179e79fc46.542ce4285a40d23a559526243235df47c5f75c197f04f37d1a0c124c32c9a084
+2022-11-24 21:40:28,409 - INFO - allennlp.common.params - dataset_reader.source_token_indexers.tokens.type = my_pretrained_transformer
+2022-11-24 21:40:28,409 - INFO - allennlp.common.params - dataset_reader.source_token_indexers.tokens.model_name = bert-large-uncased
+2022-11-24 21:40:28,409 - INFO - allennlp.common.params - dataset_reader.source_token_indexers.tokens.do_lowercase = True
+2022-11-24 21:40:28,409 - INFO - allennlp.common.params - dataset_reader.source_token_indexers.tokens.namespace = bert
+2022-11-24 21:40:28,409 - INFO - allennlp.common.params - dataset_reader.source_token_indexers.tokens.token_min_padding_length = 0
+2022-11-24 21:40:28,530 - INFO - pytorch_transformers.tokenization_utils - loading file https://s3.amazonaws.com/models.huggingface.co/bert/bert-large-uncased-vocab.txt from cache at /home/gu.826/.cache/torch/pytorch_transformers/9b3c03a36e83b13d5ba95ac965c9f9074a99e14340c523ab405703179e79fc46.542ce4285a40d23a559526243235df47c5f75c197f04f37d1a0c124c32c9a084
+2022-11-24 21:40:28,552 - INFO - utils.my_pretrained_transformer_indexer - Using token indexer padding value of 0
+2022-11-24 21:40:28,552 - INFO - allennlp.common.params - dataset_reader.dataset = graphq
+2022-11-24 21:40:28,552 - INFO - allennlp.common.params - dataset_reader.training = True
+2022-11-24 21:40:28,552 - INFO - allennlp.common.params - dataset_reader.perfect_entity_linking = True
+2022-11-24 21:40:28,552 - INFO - allennlp.common.params - dataset_reader.delexicalization = False
+2022-11-24 21:40:28,552 - INFO - allennlp.common.params - dataset_reader.EOS = [SEP]
+2022-11-24 21:40:28,552 - INFO - allennlp.common.params - dataset_reader.eval = False
+2022-11-24 21:40:28,552 - INFO - allennlp.common.params - dataset_reader.infer = False
+2022-11-24 21:40:28,552 - INFO - allennlp.common.params - dataset_reader.decoding_steps = 5
+2022-11-24 21:40:28,552 - INFO - allennlp.common.params - dataset_reader.training_option = 2
+2022-11-24 21:40:28,575 - INFO - allennlp.common.params - train_data_path = data/debug.json
+2022-11-24 21:40:28,576 - INFO - allennlp.common.params - vocabulary = <allennlp.common.lazy.Lazy object at 0x7f81b3a59c40>
+2022-11-24 21:40:28,576 - INFO - allennlp.common.params - datasets_for_vocab_creation = None
+2022-11-24 21:40:28,576 - INFO - allennlp.common.params - validation_dataset_reader.type = bottom_up
+2022-11-24 21:40:28,576 - INFO - allennlp.common.params - validation_dataset_reader.source_tokenizer.type = my_pretrained_transformer
+2022-11-24 21:40:28,576 - INFO - allennlp.common.params - validation_dataset_reader.source_tokenizer.model_name = bert-large-uncased
+2022-11-24 21:40:28,576 - INFO - allennlp.common.params - validation_dataset_reader.source_tokenizer.do_lowercase = True
+2022-11-24 21:40:28,576 - INFO - allennlp.common.params - validation_dataset_reader.source_tokenizer.start_tokens = None
+2022-11-24 21:40:28,577 - INFO - allennlp.common.params - validation_dataset_reader.source_tokenizer.end_tokens = None
+2022-11-24 21:40:28,691 - INFO - pytorch_transformers.tokenization_utils - loading file https://s3.amazonaws.com/models.huggingface.co/bert/bert-large-uncased-vocab.txt from cache at /home/gu.826/.cache/torch/pytorch_transformers/9b3c03a36e83b13d5ba95ac965c9f9074a99e14340c523ab405703179e79fc46.542ce4285a40d23a559526243235df47c5f75c197f04f37d1a0c124c32c9a084
+2022-11-24 21:40:28,715 - INFO - allennlp.common.params - validation_dataset_reader.source_token_indexers.tokens.type = my_pretrained_transformer
+2022-11-24 21:40:28,715 - INFO - allennlp.common.params - validation_dataset_reader.source_token_indexers.tokens.model_name = bert-large-uncased
+2022-11-24 21:40:28,715 - INFO - allennlp.common.params - validation_dataset_reader.source_token_indexers.tokens.do_lowercase = True
+2022-11-24 21:40:28,715 - INFO - allennlp.common.params - validation_dataset_reader.source_token_indexers.tokens.namespace = bert
+2022-11-24 21:40:28,715 - INFO - allennlp.common.params - validation_dataset_reader.source_token_indexers.tokens.token_min_padding_length = 0
+2022-11-24 21:40:28,850 - INFO - pytorch_transformers.tokenization_utils - loading file https://s3.amazonaws.com/models.huggingface.co/bert/bert-large-uncased-vocab.txt from cache at /home/gu.826/.cache/torch/pytorch_transformers/9b3c03a36e83b13d5ba95ac965c9f9074a99e14340c523ab405703179e79fc46.542ce4285a40d23a559526243235df47c5f75c197f04f37d1a0c124c32c9a084
+2022-11-24 21:40:28,872 - INFO - utils.my_pretrained_transformer_indexer - Using token indexer padding value of 0
+2022-11-24 21:40:28,872 - INFO - allennlp.common.params - validation_dataset_reader.dataset = graphq
+2022-11-24 21:40:28,872 - INFO - allennlp.common.params - validation_dataset_reader.training = True
+2022-11-24 21:40:28,872 - INFO - allennlp.common.params - validation_dataset_reader.perfect_entity_linking = True
+2022-11-24 21:40:28,872 - INFO - allennlp.common.params - validation_dataset_reader.delexicalization = False
+2022-11-24 21:40:28,872 - INFO - allennlp.common.params - validation_dataset_reader.EOS = [SEP]
+2022-11-24 21:40:28,872 - INFO - allennlp.common.params - validation_dataset_reader.eval = False
+2022-11-24 21:40:28,873 - INFO - allennlp.common.params - validation_dataset_reader.infer = True
+2022-11-24 21:40:28,873 - INFO - allennlp.common.params - validation_dataset_reader.decoding_steps = 5
+2022-11-24 21:40:28,873 - INFO - allennlp.common.params - validation_dataset_reader.training_option = 2
+2022-11-24 21:40:28,896 - INFO - allennlp.common.params - validation_data_path = None
+2022-11-24 21:40:28,896 - INFO - allennlp.common.params - test_data_path = None
+2022-11-24 21:40:28,896 - INFO - allennlp.common.params - evaluate_on_test = False
+2022-11-24 21:40:28,896 - INFO - allennlp.common.params - batch_weight_key = 
+2022-11-24 21:40:28,896 - INFO - allennlp.common.params - data_loader.type = multiprocess
+2022-11-24 21:40:28,897 - INFO - allennlp.common.params - data_loader.batch_size = 1
+2022-11-24 21:40:28,897 - INFO - allennlp.common.params - data_loader.drop_last = False
+2022-11-24 21:40:28,897 - INFO - allennlp.common.params - data_loader.shuffle = True
+2022-11-24 21:40:28,897 - INFO - allennlp.common.params - data_loader.batch_sampler = None
+2022-11-24 21:40:28,897 - INFO - allennlp.common.params - data_loader.batches_per_epoch = None
+2022-11-24 21:40:28,897 - INFO - allennlp.common.params - data_loader.num_workers = 0
+2022-11-24 21:40:28,897 - INFO - allennlp.common.params - data_loader.max_instances_in_memory = None
+2022-11-24 21:40:28,897 - INFO - allennlp.common.params - data_loader.start_method = fork
+2022-11-24 21:40:28,897 - INFO - allennlp.common.params - data_loader.cuda_device = None
+2022-11-24 21:40:28,897 - INFO - allennlp.common.params - data_loader.quiet = False
+2022-11-24 21:40:28,898 - INFO - tqdm - loading instances: 0it [00:00, ?it/s]
+2022-11-24 21:40:28,904 - INFO - allennlp.common.params - type = from_instances
+2022-11-24 21:40:28,905 - INFO - allennlp.common.params - min_count = None
+2022-11-24 21:40:28,905 - INFO - allennlp.common.params - max_vocab_size = None
+2022-11-24 21:40:28,905 - INFO - allennlp.common.params - non_padded_namespaces = ('*tags', '*labels')
+2022-11-24 21:40:28,905 - INFO - allennlp.common.params - pretrained_files = None
+2022-11-24 21:40:28,905 - INFO - allennlp.common.params - only_include_pretrained_words = False
+2022-11-24 21:40:28,905 - INFO - allennlp.common.params - tokens_to_add = None
+2022-11-24 21:40:28,905 - INFO - allennlp.common.params - min_pretrained_embeddings = None
+2022-11-24 21:40:28,905 - INFO - allennlp.common.params - padding_token = @@PADDING@@
+2022-11-24 21:40:28,905 - INFO - allennlp.common.params - oov_token = @@UNKNOWN@@
+2022-11-24 21:40:28,905 - INFO - allennlp.data.vocabulary - Fitting token dictionary from dataset.
+2022-11-24 21:40:28,905 - INFO - tqdm - building vocab: 0it [00:00, ?it/s]
+2022-11-24 21:40:28,905 - INFO - allennlp.common.params - model.type = bottom_up_gpt
+2022-11-24 21:40:28,905 - INFO - allennlp.common.params - model.beam_size = 5
+2022-11-24 21:40:28,905 - INFO - allennlp.common.params - model.decoding_steps = 5
+2022-11-24 21:40:28,906 - INFO - allennlp.common.params - model.dataset = graphq
+2022-11-24 21:40:47,941 - INFO - allennlp.common.params - trainer.type = gradient_descent
+2022-11-24 21:40:47,942 - INFO - allennlp.common.params - trainer.patience = 5
+2022-11-24 21:40:47,942 - INFO - allennlp.common.params - trainer.validation_metric = +EM
+2022-11-24 21:40:47,942 - INFO - allennlp.common.params - trainer.num_epochs = 5
+2022-11-24 21:40:47,942 - INFO - allennlp.common.params - trainer.cuda_device = 3
+2022-11-24 21:40:47,942 - INFO - allennlp.common.params - trainer.grad_norm = None
+2022-11-24 21:40:47,942 - INFO - allennlp.common.params - trainer.grad_clipping = None
+2022-11-24 21:40:47,942 - INFO - allennlp.common.params - trainer.distributed = False
+2022-11-24 21:40:47,942 - INFO - allennlp.common.params - trainer.world_size = 1
+2022-11-24 21:40:47,942 - INFO - allennlp.common.params - trainer.num_gradient_accumulation_steps = 8
+2022-11-24 21:40:47,942 - INFO - allennlp.common.params - trainer.use_amp = False
+2022-11-24 21:40:47,942 - INFO - allennlp.common.params - trainer.no_grad = None
+2022-11-24 21:40:47,942 - INFO - allennlp.common.params - trainer.learning_rate_scheduler = None
+2022-11-24 21:40:47,942 - INFO - allennlp.common.params - trainer.momentum_scheduler = None
+2022-11-24 21:40:47,942 - INFO - allennlp.common.params - trainer.moving_average = None
+2022-11-24 21:40:47,942 - INFO - allennlp.common.params - trainer.checkpointer = <allennlp.common.lazy.Lazy object at 0x7f81b3a40b20>
+2022-11-24 21:40:47,943 - INFO - allennlp.common.params - trainer.enable_default_callbacks = True
+2022-11-24 21:40:47,943 - INFO - allennlp.common.params - trainer.run_sanity_checks = True
+2022-11-24 21:40:50,167 - INFO - allennlp.common.params - trainer.optimizer.type = adam
+2022-11-24 21:40:50,168 - INFO - allennlp.common.params - trainer.optimizer.lr = 0.001
+2022-11-24 21:40:50,168 - INFO - allennlp.common.params - trainer.optimizer.betas = (0.9, 0.999)
+2022-11-24 21:40:50,168 - INFO - allennlp.common.params - trainer.optimizer.eps = 1e-08
+2022-11-24 21:40:50,168 - INFO - allennlp.common.params - trainer.optimizer.weight_decay = 0.0
+2022-11-24 21:40:50,168 - INFO - allennlp.common.params - trainer.optimizer.amsgrad = False
+2022-11-24 21:40:50,168 - INFO - allennlp.training.optimizers - Done constructing parameter groups.
+2022-11-24 21:40:50,168 - INFO - allennlp.training.optimizers - Group 0: [], {'lr': 2e-05}
+2022-11-24 21:40:50,168 - INFO - allennlp.training.optimizers - Group 1: ['linear.weight', 'linear.bias'], {}
+2022-11-24 21:40:50,168 - WARNING - allennlp.training.optimizers - When constructing parameter groups, source_embedder does not match any parameter name
+2022-11-24 21:40:50,169 - INFO - allennlp.training.optimizers - Number of trainable parameters: 6
+2022-11-24 21:40:50,170 - INFO - allennlp.common.util - The following parameters are Frozen (without gradient):
+2022-11-24 21:40:50,170 - INFO - allennlp.common.util - The following parameters are Tunable (with gradient):
+2022-11-24 21:40:50,170 - INFO - allennlp.common.util - linear.weight
+2022-11-24 21:40:50,170 - INFO - allennlp.common.util - linear.bias
+2022-11-24 21:40:50,170 - INFO - allennlp.common.params - type = default
+2022-11-24 21:40:50,170 - INFO - allennlp.common.params - keep_serialized_model_every_num_seconds = None
+2022-11-24 21:40:50,170 - INFO - allennlp.common.params - num_serialized_models_to_keep = 2
+2022-11-24 21:40:50,170 - INFO - allennlp.common.params - model_save_interval = None
+2022-11-24 21:40:50,170 - INFO - allennlp.common.params - trainer.callbacks.0.type = track_epoch_callback
+2022-11-24 21:40:50,176 - INFO - allennlp.training.trainer - Beginning training.
+2022-11-24 21:40:50,176 - INFO - allennlp.training.trainer - Epoch 0/4
+2022-11-24 21:40:50,176 - INFO - allennlp.training.trainer - Worker 0 memory usage: 20G
+2022-11-24 21:40:50,176 - INFO - allennlp.training.trainer - GPU 0 memory usage: 0B
+2022-11-24 21:40:50,176 - INFO - allennlp.training.trainer - Training
+2022-11-24 21:40:50,177 - INFO - tqdm - 0%|          | 0/1 [00:00<?, ?it/s]
+2022-11-24 21:40:50,691 - INFO - tqdm - batch_loss: 0.6795, loss: 0.6795 ||: 100%|##########| 1/1 [00:00<00:00,  1.95it/s]
+2022-11-24 21:40:50,691 - INFO - tqdm - batch_loss: 0.6795, loss: 0.6795 ||: 100%|##########| 1/1 [00:00<00:00,  1.95it/s]
+2022-11-24 21:40:50,692 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to 'experiments/debug/gpt3_dummy/best.th'.
+2022-11-24 21:40:50,692 - INFO - allennlp.training.callbacks.console_logger -                        Training |  Validation
+2022-11-24 21:40:50,692 - INFO - allennlp.training.callbacks.console_logger - gpu_0_memory_MB    |     0.000  |       N/A
+2022-11-24 21:40:50,692 - INFO - allennlp.training.callbacks.console_logger - loss               |     0.679  |       N/A
+2022-11-24 21:40:50,693 - INFO - allennlp.training.callbacks.console_logger - worker_0_memory_MB |  20089.695  |       N/A
+2022-11-24 21:40:50,693 - INFO - allennlp.training.trainer - Epoch duration: 0:00:00.516512
+2022-11-24 21:40:50,693 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:00:02
+2022-11-24 21:40:50,693 - INFO - allennlp.training.trainer - Epoch 1/4
+2022-11-24 21:40:50,693 - INFO - allennlp.training.trainer - Worker 0 memory usage: 20G
+2022-11-24 21:40:50,693 - INFO - allennlp.training.trainer - GPU 0 memory usage: 0B
+2022-11-24 21:40:50,693 - INFO - allennlp.training.trainer - Training
+2022-11-24 21:40:50,693 - INFO - tqdm - 0%|          | 0/1 [00:00<?, ?it/s]
+2022-11-24 21:40:50,694 - INFO - tqdm - batch_loss: 0.5746, loss: 0.5746 ||: 100%|##########| 1/1 [00:00<00:00, 992.97it/s]
+2022-11-24 21:40:50,695 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to 'experiments/debug/gpt3_dummy/best.th'.
+2022-11-24 21:40:50,695 - INFO - allennlp.training.callbacks.console_logger -                        Training |  Validation
+2022-11-24 21:40:50,695 - INFO - allennlp.training.callbacks.console_logger - gpu_0_memory_MB    |     0.000  |       N/A
+2022-11-24 21:40:50,695 - INFO - allennlp.training.callbacks.console_logger - loss               |     0.575  |       N/A
+2022-11-24 21:40:50,695 - INFO - allennlp.training.callbacks.console_logger - worker_0_memory_MB |  20952.832  |       N/A
+2022-11-24 21:40:50,695 - INFO - allennlp.training.trainer - Epoch duration: 0:00:00.002561
+2022-11-24 21:40:50,695 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:00:00
+2022-11-24 21:40:50,695 - INFO - allennlp.training.trainer - Epoch 2/4
+2022-11-24 21:40:50,695 - INFO - allennlp.training.trainer - Worker 0 memory usage: 20G
+2022-11-24 21:40:50,696 - INFO - allennlp.training.trainer - GPU 0 memory usage: 0B
+2022-11-24 21:40:50,696 - INFO - allennlp.training.trainer - Training
+2022-11-24 21:40:50,696 - INFO - tqdm - 0%|          | 0/1 [00:00<?, ?it/s]
+2022-11-24 21:40:50,697 - INFO - tqdm - batch_loss: 0.5400, loss: 0.5400 ||: 100%|##########| 1/1 [00:00<00:00, 1118.78it/s]
+2022-11-24 21:40:50,698 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to 'experiments/debug/gpt3_dummy/best.th'.
+2022-11-24 21:40:50,698 - INFO - allennlp.training.callbacks.console_logger -                        Training |  Validation
+2022-11-24 21:40:50,698 - INFO - allennlp.training.callbacks.console_logger - gpu_0_memory_MB    |     0.000  |       N/A
+2022-11-24 21:40:50,698 - INFO - allennlp.training.callbacks.console_logger - loss               |     0.540  |       N/A
+2022-11-24 21:40:50,698 - INFO - allennlp.training.callbacks.console_logger - worker_0_memory_MB |  20952.832  |       N/A
+2022-11-24 21:40:50,698 - INFO - allennlp.training.trainer - Epoch duration: 0:00:00.002481
+2022-11-24 21:40:50,698 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:00:00
+2022-11-24 21:40:50,698 - INFO - allennlp.training.trainer - Epoch 3/4
+2022-11-24 21:40:50,698 - INFO - allennlp.training.trainer - Worker 0 memory usage: 20G
+2022-11-24 21:40:50,698 - INFO - allennlp.training.trainer - GPU 0 memory usage: 0B
+2022-11-24 21:40:50,698 - INFO - allennlp.training.trainer - Training
+2022-11-24 21:40:50,698 - INFO - tqdm - 0%|          | 0/1 [00:00<?, ?it/s]
+2022-11-24 21:40:50,699 - INFO - tqdm - batch_loss: 0.6959, loss: 0.6959 ||: 100%|##########| 1/1 [00:00<00:00, 1146.30it/s]
+2022-11-24 21:40:50,700 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to 'experiments/debug/gpt3_dummy/best.th'.
+2022-11-24 21:40:50,700 - INFO - allennlp.training.callbacks.console_logger -                        Training |  Validation
+2022-11-24 21:40:50,700 - INFO - allennlp.training.callbacks.console_logger - gpu_0_memory_MB    |     0.000  |       N/A
+2022-11-24 21:40:50,700 - INFO - allennlp.training.callbacks.console_logger - loss               |     0.696  |       N/A
+2022-11-24 21:40:50,700 - INFO - allennlp.training.callbacks.console_logger - worker_0_memory_MB |  20952.832  |       N/A
+2022-11-24 21:40:50,700 - INFO - allennlp.training.trainer - Epoch duration: 0:00:00.002371
+2022-11-24 21:40:50,700 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:00:00
+2022-11-24 21:40:50,700 - INFO - allennlp.training.trainer - Epoch 4/4
+2022-11-24 21:40:50,700 - INFO - allennlp.training.trainer - Worker 0 memory usage: 20G
+2022-11-24 21:40:50,701 - INFO - allennlp.training.trainer - GPU 0 memory usage: 0B
+2022-11-24 21:40:50,701 - INFO - allennlp.training.trainer - Training
+2022-11-24 21:40:50,701 - INFO - tqdm - 0%|          | 0/1 [00:00<?, ?it/s]
+2022-11-24 21:40:50,702 - INFO - tqdm - batch_loss: 0.7056, loss: 0.7056 ||: 100%|##########| 1/1 [00:00<00:00, 1142.55it/s]
+2022-11-24 21:40:50,703 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to 'experiments/debug/gpt3_dummy/best.th'.
+2022-11-24 21:40:50,703 - INFO - allennlp.training.callbacks.console_logger -                        Training |  Validation
+2022-11-24 21:40:50,703 - INFO - allennlp.training.callbacks.console_logger - gpu_0_memory_MB    |     0.000  |       N/A
+2022-11-24 21:40:50,703 - INFO - allennlp.training.callbacks.console_logger - loss               |     0.706  |       N/A
+2022-11-24 21:40:50,703 - INFO - allennlp.training.callbacks.console_logger - worker_0_memory_MB |  20952.832  |       N/A
+2022-11-24 21:40:50,703 - INFO - allennlp.training.trainer - Epoch duration: 0:00:00.002392
+2022-11-24 21:40:50,703 - INFO - allennlp.training.checkpointer - loading best weights
+2022-11-24 21:40:50,703 - INFO - allennlp.common.util - Metrics: {
+  "best_epoch": 4,
+  "peak_worker_0_memory_MB": 20952.83203125,
+  "peak_gpu_0_memory_MB": 0,
+  "training_duration": "0:00:00.526056",
+  "training_start_epoch": 0,
+  "training_epochs": 4,
+  "epoch": 4,
+  "training_loss": 0.7055895924568176,
+  "training_worker_0_memory_MB": 20952.83203125,
+  "training_gpu_0_memory_MB": 0.0
+}
+2022-11-24 21:40:50,703 - INFO - allennlp.models.archival - archiving weights and vocabulary to experiments/debug/gpt3_dummy/model.tar.gz

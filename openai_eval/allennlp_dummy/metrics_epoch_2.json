@@ -1,0 +1,12 @@
+{
+  "best_epoch": 2,
+  "peak_worker_0_memory_MB": 20952.83203125,
+  "peak_gpu_0_memory_MB": 0,
+  "training_duration": "0:00:00.521112",
+  "training_start_epoch": 0,
+  "training_epochs": 2,
+  "epoch": 2,
+  "training_loss": 0.5399959683418274,
+  "training_worker_0_memory_MB": 20952.83203125,
+  "training_gpu_0_memory_MB": 0.0
+}

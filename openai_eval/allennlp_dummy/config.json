@@ -1,0 +1,55 @@
+{
+    "dataset_reader": {
+        "type": "bottom_up",
+        "dataset": "graphq",
+        "decoding_steps": 5,
+        "training_option": 2
+    },
+    "model": {
+        "type": "bottom_up_gpt",
+        "dataset": "graphq",
+        "decoding_steps": 5
+    },
+    "train_data_path": "data/debug.json",
+    "trainer": {
+        "callbacks": [
+            {
+                "type": "track_epoch_callback"
+            }
+        ],
+        "cuda_device": 3,
+        "num_epochs": 5,
+        "num_gradient_accumulation_steps": 8,
+        "optimizer": {
+            "type": "adam",
+            "lr": 0.001,
+            "parameter_groups": [
+                [
+                    [
+                        "source_embedder"
+                    ],
+                    {
+                        "lr": 2e-05
+                    }
+                ]
+            ]
+        },
+        "patience": 5,
+        "validation_metric": "+EM"
+    },
+    "data_loader": {
+        "batch_size": 1,
+        "shuffle": true
+    },
+    "validation_data_loader": {
+        "batch_size": 1,
+        "shuffle": true
+    },
+    "validation_dataset_reader": {
+        "type": "bottom_up",
+        "dataset": "graphq",
+        "decoding_steps": 5,
+        "infer": true,
+        "training_option": 2
+    }
+}
