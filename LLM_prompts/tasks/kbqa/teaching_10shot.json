@@ -1,0 +1,42 @@
+[
+    {
+        "question": "what's the supreme law in the canadian law?",
+        "query": "(AND law.constitution (JOIN base.morelaw.legal_system.constitution_inv canadian law))"
+    },
+    {
+        "question": "the house of blues show is found in the casino owned by whom?",
+        "query": "(AND base.casinos.casino_owner (JOIN base.casinos.casino.owner_inv (JOIN base.casinos.casino.shows the house of blues)))"
+    },
+    {
+        "question": "enumerate all the breeds of cat.",
+        "query": "(AND base.petbreeds.cat_breed (JOIN biology.domesticated_animal.breeds_inv cat))"
+    },
+    {
+        "question": "how many other typefaces from microsoft are designed by the same person as verdana?",
+        "query": "(COUNT (AND base.typefaces.typeface (AND (JOIN base.typefaces.typeface.typeface_creator (JOIN base.typefaces.typeface.typeface_creator_inv verdana)) (JOIN base.typefaces.typeface.foundry microsoft))))"
+    },
+    {
+        "question": "a character based on patrick heron watson has what medical condition?",
+        "query": "(AND fictional_universe.medical_condition_in_fiction (JOIN fictional_universe.medical_condition_in_fiction.characters_with_this_condition (JOIN fictional_universe.fictional_character.based_on patrick heron watson)))"
+    },
+    {
+        "question": "liberty basic has been influenced by which programming language?",
+        "query": "(AND computer.programming_language (JOIN computer.programming_language.influenced liberty basic))"
+    },
+    {
+        "question": "what is the latest skyscraper that is closed for occupancy?",
+        "query": "(ARGMAX architecture.skyscraper architecture.structure.closed)"
+    },
+    {
+        "question": "what are the musical release component tracks recordings made by royal philarmonic orchestra and featured by mike townend?",
+        "query": "(AND music.release_component (JOIN music.release.track (AND (JOIN music.artist.track_inv royal philarmonic orchestra) (JOIN music.recording.featured_artists mike townend))))"
+    },
+    {
+        "question": "what is the product line that uses transformers 2: revenge of the fallen theme?",
+        "query": "(AND business.product_line (JOIN business.product_line.themes transformers 2: revenge of the fallen))"
+    },
+    {
+        "question": "lend lease retail partnership owns which shopping center?",
+        "query": "(AND business.shopping_center (JOIN business.shopping_center.owner m.0zfnkbs))"
+    }
+]

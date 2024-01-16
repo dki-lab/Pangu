@@ -1,0 +1,31 @@
+{
+    "template": [
+        "### Please translate the follow questions to lisp like query language.",
+        "$$demo$$",
+        "$$input$$"
+    ],
+    "demo": {
+        "template": [
+            "# $$question$$",
+            "$$query$$"
+        ],
+        "slots": {
+            "question": {
+                "default_value": ""
+            },
+            "query": {
+                "default_value": ""
+            }
+        }
+    },
+    "input": {
+        "template": [
+            "# $$question$$\n"
+        ],
+        "slots": {
+            "question": {
+                "default_value": ""
+            }
+        }
+    }
+}
