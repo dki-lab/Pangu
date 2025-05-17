@@ -1,5 +1,3 @@
-:mega: :mega:**(This is mainly for reproducing the results in our ACL'2023 paper. We will release the generic Pangu library in [OSU-NLP-Group/Pangu](https://github.com/OSU-NLP-Group/Pangu).)**
-
 # Don't Generate, Discriminate: A Proposal for Grounding Language Models to Real-World Environments
 [![Contributions Welcome](https://img.shields.io/badge/Contributions-Welcome-brightgreen.svg?style=flat-square)](https://github.com/dki-lab/Pangu/issues)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
